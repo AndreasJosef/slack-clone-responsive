@@ -12,12 +12,100 @@
 
   }
 
-  .workspaces {
+.workspaces {
+  background: white;
+  color: black;
+  border-radius: 10px;
+  width: 350px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  text-align: center;
+  overflow: hidden; 
+  margin: 2rem auto; 
+  font-family: Arial, sans-serif;
+}
 
+.workspace__launch {
+  background-color: rgb(248, 218, 248); 
+  padding: 1rem;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.workspace__launch p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Container with logo + info */
+.container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+.container img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.workspace-info h2 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.workspace-info p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: gray;
+}
+
+
+.launch-btn {
+  display: block;
+  width: calc(100% - 3rem);
+  margin: 0 auto 1rem;
+  padding: 0.8rem;
+  background: #611f69; 
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.launch-btn:hover {
+  background: #4a154b;
+}
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;      
+    justify-content: space-between;
+    align-items: center;
   }
 
-  .connect {
-    
+  .workspace-info {
+    text-align: left;
   }
 
+  .launch-btn {
+    width: auto;               
+    margin: 0;  
+    padding: 0.6rem 1.2rem;
+  }
+.see-more {
+  display: block;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #4a154b;
+  margin-bottom: 1rem;
+  text-decoration: none;
+}
+
+.see-more:hover {
+  text-decoration: underline;
+}
 }
