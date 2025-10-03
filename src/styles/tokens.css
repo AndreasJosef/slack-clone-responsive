@@ -1,21 +1,20 @@
 @layer tokens {
   :root {
     /* Surfaces & text */
-    --surface-page: #ffffff;
-    --surface-card: #ffffff;
-    --ink-primary: #0f172a;
+    --ink-primary: #fff;
     --ink-muted:   #334155;
 
     /* Brand */
-    --brand-600: #27547d;
-    --brand-500: #2f6aa0;
-    --accent-500: #26c793;
+    --brand: #4a154b;
+    --logo-size: 7rem;
+    --sales-button-border: var(--ink-primary);
 
     /* Links */
     --link:       var(--brand-600);
     --link-hover: var(--brand-500);
 
     /* Spacing */
+    --space--1: .5rem;
     --space-1: 1rem;
     --space-2: 2rem;
     --gutter: clamp(1rem, 4vw, 4rem);
@@ -30,6 +29,6 @@
     --step-3: clamp(2rem, 1.6rem + 1.5vw, 2.8rem);
 
     /* Radius */
-    --radius-md: .75rem;
+    --radius-sm: .25rem;
   }
 }
