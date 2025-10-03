@@ -1,15 +1,55 @@
 @layer blocks {
 
-  .page-header {
-
+  .page {
+    background-color: var(--brand);
+    max-inline-size: 100%;
+    color: var(--ink-primary);
   }
 
-  .page-nav {
+  .page-header {}
 
+  .page-nav {
+    padding-inline: var(--space-1);
+    padding-block-start: var(--space--1);
+    display: flex;
+    align-items: center;
+    inline-size: 100%;
+    justify-content: space-between;
+    gap: var(--space-1);
+  }
+
+  .logo {
+    inline-size: var(--logo-size);
+  }
+
+  .page-nav__menu {
+    display: none;
+  }
+
+  .page-nav__menu-icons {
+    display: flex;
+    gap: var(--space-1);
+    margin-inline-start: auto;
+  }
+
+  .page-nav__menu-icons>* {
+    inline-size: var(--step-1);
+    block-size: var(--step-1);
+  }
+
+  .cta-buttons {
+    display: none;
   }
 
   .hero {
+    display: flex;
+    font-size: var(--step-2);
+    align-items: center;
+    gap: 8px;
+  }
 
+  .hero__image {
+    inline-size: 3rem;
   }
 
 .workspaces {
@@ -89,6 +129,82 @@
 
   .workspace-info {
     text-align: left;
+  @media (min-width: 1024px) {
+    .cta-buttons {
+      display: flex;
+      gap: var(--space-1);
+      color: var(--ink-primary);
+    }
+
+    .cta-buttons>* {
+      padding: var(--space--1) var(--space-1);
+      border: 3px solid var(--sales-button-border);
+      font-weight: 600;
+      border-radius: var(--radius-sm);
+      text-transform: uppercase;
+    }
+
+    .cta__create {
+
+      padding: var(--space--1) var(--space-1);
+      background: white;
+      color: var(--brand);
+
+    }
+
+    .page-nav__menu {
+      display: flex;
+      gap: var(--space-1);
+      font-weight: 500;
+    }
+
+    .hamburger {
+      display: none;
+    }
+  }
+
+/* Ernest workspace__create */
+  .workspace__create__content {
+    background-color:white;
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    width: 100%;
+    border-style: none;
+    border-radius: 16px;
+    align-items: center;
+    height: 90px;
+  }
+  .image {
+    margin-right: auto;
+    margin-top: 30px;
+  }
+  .text {
+    margin-right: 360px;
+    text-decoration: black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+  }
+  #new-workspace {
+    display: flex;
+    align-items: center;
+    color: purple;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight:600;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-style:ridge;
+    border-color: rgb(206, 174, 206);
+    height: fit-content;
+    margin-right: 30px;
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 7px;
+    
+  }
+  .workspace__create {
+    display: flex;
+    justify-content: center;
   }
 
   .launch-btn {
@@ -108,4 +224,72 @@
 .see-more:hover {
   text-decoration: underline;
 }
+  .connect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-bottom-color: black;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 20px 0px;
+    box-sizing: border-box;
+    text-align: center;
+    /* position: relative; */
+    padding-right: 0px;
+    max-inline-size: 100%;
+
+  }
+
+  @media (min-width: 1024px) {
+    .connect {
+      flex-direction: row;
+    }
+  }
+
+  .connectBild {
+    border-radius: 0px 30px 30px 0px;
+
+
+  }
+
+  .ccard {}
+
+
+  .slack_span {
+    color: black;
+    font-family: Salesforce, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    display: block;
+    margin-top: 5px;
+  }
+
+  .connecth2 {
+    color: black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-block-end: 16px;
+    margin-bottom: 16px;
+    text-align: left;
+    display: block;
+    font-size: 31.3269px;
+
+  }
+
+  .connectP {
+    display: block;
+    font-size: 18px;
+    font-weight: 400;
+    margin-block-end: 16px;
+    margin-bottom: 16px;
+    text-align: left;
+
+  }
+
+  .connectLink {
+    cursor: pointer;
+    display: block;
+    font-size: 18px;
+    font-weight: 400px;
+    margin-bottom: 16px;
+
+  }
 }

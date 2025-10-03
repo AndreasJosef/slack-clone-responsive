@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Slack Clone Responsive</title>
     <link rel="stylesheet" href="/src/styles/app.css" />
+    <link rel="stylesheet" href="/src/styles/blocks.css">
 </head>
 
 <body class="page">
@@ -13,17 +14,34 @@
     <!-- Henrik & Andreas -->
     <header class="page-header">
         <nav class="page-nav">
-            <h1>Logo</h1>
-            <a href="#">Features</a>
-            <a href="#">Solutions</a>
-            <a href="#">Enterprise</a>
-            <a href="#">Resources</a>
-            <a href="#">Pricing</a>
-            <img src="" alt="Search Icon">
-            <button>Talk to Sales</button>
-            <button class="cta">Create a New Workspace</button>
+            <img class="logo" src="./src/img/slack-logo.png" alt="Slack Logo">
+            <div class="page-nav__menu">
+                <a href="#">Features</a>
+                <a href="#">Solutions</a>
+                <a href="#">Enterprise</a>
+                <a href="#">Resources</a>
+                <a href="#">Pricing</a>
+            </div>
+            <div class="page-nav__menu-icons">
+                <button class="search-icon">
+                    <img src="./src/img/search-icon.svg" alt="Search Icon">
+                </button>
+                <button class="hamburger">
+                    <img src="./src/img/hamburger-icon.svg" alt="Hamburger Icon">
+                </button>
+
+            </div>
+            <div class="cta-buttons">
+                <button class="cta__sales">Talk to Sales</button>
+                <button class="cta__create">Create a New Workspace</button>
+            </div>
         </nav>
-        <h2 class="hero">👋 Welcome back!</h2>
+        <div class="hero">
+            <div class="hero__image">
+                <img src="./src/img/waving-hand.png" alt="Waving Hand">
+            </div>
+            <h1 class="hero__heading">Welcome back!</h1>
+        </div>
     </header>
     <main>
         <!-- Workspace -->
@@ -47,8 +65,22 @@
                 <!-- Magdalena -->
 
             </div>
+            <!--Ernest-->
             <div class="workspace__create">
-                <!-- Ernest -->
+                <div class="workspace__create__content">
+                    <img
+                    class="image"
+                    src="https://a.slack-edge.com/0eacde0/marketing/img/homepage/signed-in-users/create-new-workspace-module/woman-with-laptop-color-background-new.png"
+                    srcset="https://a.slack-edge.com/0eacde0/marketing/img/homepage/signed-in-users/create-new-workspace-module/woman-with-laptop-color-background-new.png 1x,
+                    https://a.slack-edge.com/0eacde0/marketing/img/homepage/signed-in-users/create-new-workspace-module/woman-with-laptop-color-background-new@2x.png 2x" 
+                    alt="Women with laptop">
+                    
+                    <h2 class="text">Want to use Slack with a different team?
+                    </h2>
+                    <a class="link-1" id="new-workspace" href="https://slack.com/get-started?entry_point=workspaces#/createnew">
+                            CREATE A NEW WORKSPACE
+                    </a>
+                </div>
 
             </div>
         </section>
@@ -56,7 +88,17 @@
         <!-- Fausto -->
         <section class="connect">
             <!-- Connect section speep up work with..  -->
-             <p>speed up work ...</p>
+             <img src="https://a.slack-edge.com/4ebba/marketing/img/homepage/bold-existing-users/promos-trial-or-has-paid-plan/slack-connect-illustration@2x.png" alt="slack-connect-illustration" width="560" class="connectBild">
+             <div class="ccard">
+                 <span class="slack_span">Slack Connect</span>
+                 
+                 <h2 class="connecth2">Speed up work with external partners, using Slack Connect</h2>
+                 
+                 <p class="connectP">Invite a partner to work with you in Slack and they'll get 3 months of a premium plan for free.*</p>
+                 
+                 <a href="" class="connectLink">Invite a partner </a>
+                 
+                </div>
         </section>
     </main>
 </body>
