@@ -1,7 +1,23 @@
 @layer blocks {
-  @import './nav.css';
-  @import './hero.css';
-  @import './workspace.css';
-  @import './connect.css';
+
+  .page-header {
+
+  }
+
+  .page-nav {
+
+  }
+
+  .hero {
+
+  }
+
+  .workspaces {
+
+  }
+
+  .connect {
+    
+  }
 
 }
