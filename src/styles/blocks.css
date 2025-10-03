@@ -1,13 +1,23 @@
 @layer blocks {
 
+  /* Page */
   .page {
     background-color: var(--brand);
-    max-inline-size: 100%;
     color: var(--ink-primary);
   }
 
-  .page-header {}
+  .page-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
 
+  .container {
+    margin-inline: auto;
+    max-width: min(100vw - 2rem, 1024px);
+  }
+
+  /* Page Header Section */
   .page-nav {
     padding-inline: var(--space-1);
     padding-block-start: var(--space--1);
@@ -52,83 +62,6 @@
     inline-size: 3rem;
   }
 
-.workspaces {
-  background: white;
-  color: black;
-  border-radius: 10px;
-  width: 350px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-  text-align: center;
-  overflow: hidden; 
-  margin: 2rem auto; 
-  font-family: Arial, sans-serif;
-}
-
-.workspace__launch {
-  background-color: rgb(248, 218, 248); 
-  padding: 1rem;
-  margin: 0;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.workspace__launch p {
-  margin: 0;
-  font-size: 0.9rem;
-}
-
-/* Container with logo + info */
-.container {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1.5rem;
-}
-
-.container img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-}
-
-.workspace-info h2 {
-  margin: 0;
-  font-size: 1.1rem;
-}
-
-.workspace-info p {
-  margin: 0;
-  font-size: 0.9rem;
-  color: gray;
-}
-
-
-.launch-btn {
-  display: block;
-  width: calc(100% - 3rem);
-  margin: 0 auto 1rem;
-  padding: 0.8rem;
-  background: #611f69; 
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.launch-btn:hover {
-  background: #4a154b;
-}
-@media (min-width: 768px) {
-  .container {
-    flex-direction: row;      
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .workspace-info {
-    text-align: left;
   @media (min-width: 1024px) {
     .cta-buttons {
       display: flex;
@@ -163,67 +96,138 @@
     }
   }
 
-/* Ernest workspace__create */
-  .workspace__create__content {
-    background-color:white;
-    display: flex;
-    justify-content: center;
-    max-width: 1200px;
+  /* Workspace Launch Section */
+  .workspace-launch {
+    background: white;
     width: 100%;
-    border-style: none;
-    border-radius: 16px;
-    align-items: center;
-    height: 90px;
+    color: black;
+    border-radius: var(--radius-md);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    text-align: center;
   }
-  .image {
-    margin-right: auto;
-    margin-top: 30px;
+
+  .workspace-launch__header {
+    background-color: rgb(248, 218, 248);
+    display: flex;
+    border-top-left-radius: var(--radius-md);
+    border-top-right-radius: var(--radius-md);
+    padding: 1rem;
   }
-  .text {
-    margin-right: 360px;
-    text-decoration: black;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 18px;
+
+  .workspace__launch p {
+    font-size: 0.9rem;
   }
-  #new-workspace {
+
+  .workspace__details {
     display: flex;
     align-items: center;
-    color: purple;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight:600;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    border-style:ridge;
-    border-color: rgb(206, 174, 206);
-    height: fit-content;
-    margin-right: 30px;
-    display: inline-block;
-    padding: 12px 24px;
-    border-radius: 7px;
-    
+    gap: 1rem;
+    padding: 1.5rem;
   }
-  .workspace__create {
-    display: flex;
-    justify-content: center;
+
+  .workspace__details img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+
+  .workspace-info h2 {
+    margin: 0;
+    font-size: var(--step-2);
+  }
+
+  .workspace-info p {
+    font-size: 0.9rem;
+    color: var(--ink-muted);
   }
 
   .launch-btn {
-    width: auto;               
-    margin: 0;  
+    display: block;
+    width: calc(100% - 3rem);
+    margin: 0 auto 1rem;
+    padding: 0.8rem;
+    background: var(--brand);
+    color: white;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .launch-btn {
+    width: auto;
+    margin: 0;
     padding: 0.6rem 1.2rem;
   }
-.see-more {
-  display: block;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #4a154b;
-  margin-bottom: 1rem;
-  text-decoration: none;
-}
 
-.see-more:hover {
-  text-decoration: underline;
-}
+  .launch-btn:hover {
+    background: #4a154b;
+  }
+
+  .see-more {
+    display: block;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #4a154b;
+    text-decoration: none;
+  }
+
+  .see-more:hover {
+    text-decoration: underline;
+  }
+
+  @media (min-width: 768px) {
+    .workspace__details {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .workspace-info {
+      text-align: left;
+    }
+  }
+
+
+  /* Workspace Create Section */
+  .workspace__create {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border-style: none;
+    border-radius: var(--radius-md);
+    flex-direction: column;
+    padding-inline: var(--space-1);
+  }
+
+  @media (min-width: 768px) {
+    .workspace__create {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  .workspace__create h2 {
+    font-size: var(--step-2);
+    color: #000;
+  }
+
+  .workspace__create--button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--brand);
+    font-weight: 600;
+    border-style: ridge;
+    border-color: rgb(206, 174, 206);
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--radius-sm);
+
+  }
+
+
+  /* Connect Section */
   .connect {
     display: flex;
     flex-direction: column;
@@ -247,16 +251,10 @@
 
   .connectBild {
     border-radius: 0px 30px 30px 0px;
-
-
   }
-
-  .ccard {}
-
 
   .slack_span {
     color: black;
-    font-family: Salesforce, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 14px;
     font-weight: 700;
     display: block;
@@ -265,7 +263,6 @@
 
   .connecth2 {
     color: black;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin-block-end: 16px;
     margin-bottom: 16px;
     text-align: left;

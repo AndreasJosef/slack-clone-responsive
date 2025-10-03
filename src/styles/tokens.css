@@ -2,7 +2,7 @@
   :root {
     /* Surfaces & text */
     --ink-primary: #fff;
-    --ink-muted:   #334155;
+    --ink-muted:   gray;
 
     /* Brand */
     --brand: #4a154b;
@@ -30,5 +30,6 @@
 
     /* Radius */
     --radius-sm: .25rem;
+    --radius-md: 10px;
   }
 }
