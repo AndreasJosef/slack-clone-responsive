@@ -19,6 +19,23 @@
     block-size: auto;
   }
 
+  /* buttons */
+  button {
+    padding: 0;
+    background-color: inherit;
+    border: none;
+    color: inherit;
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
+
+  /* links */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
   /* accessible focus */
   :focus-visible {
     outline: 3px solid Highlight;
