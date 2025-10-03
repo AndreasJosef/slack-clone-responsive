@@ -1,0 +1,21 @@
+@layer blocks {
+  .hero {
+    inline-size: var(--container);
+    margin-inline: auto;
+    padding-block: var(--space-2);
+  }
+
+  .hero__title {
+    display: inline-block;
+    margin-inline-start: var(--gutter);
+    font-size: var(--step-3);
+    color: var(--ink-primary);
+    border-block-end: 3px solid var(--accent-500);
+  }
+
+  .hero__copy {
+    margin-inline-start: var(--gutter);
+    font-size: var(--step-1);
+    color: var(--ink-muted);
+  }
+}

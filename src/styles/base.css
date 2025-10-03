@@ -1,0 +1,32 @@
+@layer base {
+  /* reset quirks */
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+
+  /* type baseline */
+  body {
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, "Open Sans", sans-serif;
+    font-size: var(--step-0);
+    line-height: 1.5;
+    color: var(--ink-primary);
+    background: var(--surface-page);
+  }
+
+  /* media elements sane by default */
+  img, svg, video {
+    display: block;
+    max-inline-size: 100%;
+    block-size: auto;
+  }
+
+  /* accessible focus */
+  :focus-visible {
+    outline: 3px solid Highlight;
+    outline-offset: 2px;
+  }
+
+  /* respect user motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
+}
