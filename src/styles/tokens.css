@@ -6,6 +6,7 @@
 
     /* Brand */
     --brand: #4a154b;
+    --brand-accent: #611f69;
     --logo-size: 7rem;
     --sales-button-border: var(--ink-primary);
 
@@ -24,6 +25,7 @@
     --hero-pad-top: clamp(1rem, 8vh, 6rem);
 
     /* Type scale (just enough) */
+    --stpe--1: clamp(0.875rem, 0.7917rem + 2.6042vw, 1.125rem);
     --step-0: clamp(1rem, .9rem + .5vw, 1.125rem);
     --step-1: clamp(1.25rem, 1.1rem + .8vw, 1.5rem);
     --step-3: clamp(2rem, 1.6rem + 1.5vw, 2.8rem);

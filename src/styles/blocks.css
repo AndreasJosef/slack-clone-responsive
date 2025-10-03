@@ -19,11 +19,10 @@
 
   /* Page Header Section */
   .page-nav {
-    padding-inline: var(--space-1);
-    padding-block-start: var(--space--1);
     display: flex;
     align-items: center;
-    inline-size: 100%;
+    padding-inline: var(--space-1);
+    padding-block-start: var(--space--1);
     justify-content: space-between;
     gap: var(--space-1);
   }
@@ -111,24 +110,26 @@
     display: flex;
     border-top-left-radius: var(--radius-md);
     border-top-right-radius: var(--radius-md);
-    padding: 1rem;
-  }
-
-  .workspace__launch p {
-    font-size: 0.9rem;
+    padding: var(--space-1);
   }
 
   .workspace__details {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    padding: 1.5rem;
+    flex-wrap: wrap;
+    gap: var(--space-1);
+    padding-inline: var(--space-1);
+    padding-block: var(--space-1);
   }
 
   .workspace__details img {
     width: 60px;
     height: 60px;
     border-radius: 50%;
+  }
+
+  .workspace-info {
+    margin-inline-end: auto;
   }
 
   .workspace-info h2 {
@@ -138,43 +139,24 @@
 
   .workspace-info p {
     font-size: 0.9rem;
+    margin-block: 0;
     color: var(--ink-muted);
+    text-align: left;
   }
 
   .launch-btn {
     display: block;
-    width: calc(100% - 3rem);
-    margin: 0 auto 1rem;
-    padding: 0.8rem;
-    background: var(--brand);
-    color: white;
-    border: none;
+    font-size: var(--step--1);
+    font-weight: 600;
+    color: var(--ink-primary);
+    padding: var(--space-1) var(--space-1);
+    background: var(--brand-accent);
     border-radius: var(--radius-sm);
-    font-size: 1rem;
-    font-weight: bold;
     cursor: pointer;
-  }
-
-  .launch-btn {
-    width: auto;
-    margin: 0;
-    padding: 0.6rem 1.2rem;
   }
 
   .launch-btn:hover {
     background: #4a154b;
-  }
-
-  .see-more {
-    display: block;
-    text-align: center;
-    font-size: 0.9rem;
-    color: #4a154b;
-    text-decoration: none;
-  }
-
-  .see-more:hover {
-    text-decoration: underline;
   }
 
   @media (min-width: 768px) {
@@ -183,33 +165,25 @@
       justify-content: space-between;
       align-items: center;
     }
-
-    .workspace-info {
-      text-align: left;
-    }
   }
-
 
   /* Workspace Create Section */
   .workspace__create {
     background-color: white;
     display: flex;
-    align-items: center;
-    border-style: none;
+    gap: var(--space-1);
+    flex-direction: column-reverse;
     border-radius: var(--radius-md);
-    flex-direction: column;
     padding-inline: var(--space-1);
   }
 
-  @media (min-width: 768px) {
-    .workspace__create {
-      flex-direction: row;
-      justify-content: space-between;
-    }
+  .workspace__create--image {
+    margin-block-end: -2rem;
   }
 
-  .workspace__create h2 {
+  .workspace__create--heading {
     font-size: var(--step-2);
+    order: 1;
     color: #000;
   }
 
@@ -218,75 +192,54 @@
     align-items: center;
     justify-content: center;
     color: var(--brand);
+    box-shadow: inset 0 0 0 1px var(--brand-accent);
     font-weight: 600;
-    border-style: ridge;
-    border-color: rgb(206, 174, 206);
     padding: var(--space-1) var(--space-2);
     border-radius: var(--radius-sm);
-
   }
 
+  @media (min-width: 960px) {
+    .workspace__create {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .workspace__create--heading {
+      order: initial;
+    }
+  }
 
   /* Connect Section */
   .connect {
     display: flex;
     flex-direction: column;
-    align-items: center;
     background-color: white;
-    border-bottom-color: black;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 20px 0px;
-    box-sizing: border-box;
-    text-align: center;
-    /* position: relative; */
-    padding-right: 0px;
-    max-inline-size: 100%;
+    color: #000;
+  }
 
+  .connect__image {
+    border-radius: 0px 30px 30px 0px;
+  }
+
+  .connect__eyebrow {
+    font-weight: 700;
+  }
+
+  .connect__title {
+    color: black;
+  }
+
+  .connect__text {
+  }
+
+  .connect__link {
+    cursor: pointer;
   }
 
   @media (min-width: 1024px) {
     .connect {
       flex-direction: row;
     }
-  }
-
-  .connectBild {
-    border-radius: 0px 30px 30px 0px;
-  }
-
-  .slack_span {
-    color: black;
-    font-size: 14px;
-    font-weight: 700;
-    display: block;
-    margin-top: 5px;
-  }
-
-  .connecth2 {
-    color: black;
-    margin-block-end: 16px;
-    margin-bottom: 16px;
-    text-align: left;
-    display: block;
-    font-size: 31.3269px;
-
-  }
-
-  .connectP {
-    display: block;
-    font-size: 18px;
-    font-weight: 400;
-    margin-block-end: 16px;
-    margin-bottom: 16px;
-    text-align: left;
-
-  }
-
-  .connectLink {
-    cursor: pointer;
-    display: block;
-    font-size: 18px;
-    font-weight: 400px;
-    margin-bottom: 16px;
-
   }
 }
