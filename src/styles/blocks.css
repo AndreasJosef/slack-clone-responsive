@@ -14,17 +14,21 @@
 
   .container {
     margin-inline: auto;
-    max-width: min(100vw - 2rem, 1024px);
+    max-inline-size: min(100vw, var(--content-max));
+    padding-inline: var(--gutter);
+
   }
 
   /* Page Header Section */
   .page-nav {
     display: flex;
     align-items: center;
-    padding-inline: var(--space-1);
-    padding-block-start: var(--space--1);
+    padding-inline: var(--gutter);
+    padding-block-start: var(--space-1);
     justify-content: space-between;
     gap: var(--space-1);
+    margin-inline: auto;
+    max-inline-size: min(100vw, var(--nav-max));
   }
 
   .logo {
@@ -232,8 +236,8 @@
     color: black;
   }
 
-  .connect__text {
-  }
+  /* .connect__text {
+  } */
 
   .connect__link {
     cursor: pointer;

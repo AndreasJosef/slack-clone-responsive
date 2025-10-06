@@ -2,7 +2,7 @@
   :root {
     /* Surfaces & text */
     --ink-primary: #fff;
-    --ink-muted:   gray;
+    --ink-muted: gray;
 
     /* Brand */
     --brand: #4a154b;
@@ -11,18 +11,21 @@
     --sales-button-border: var(--ink-primary);
 
     /* Links */
-    --link:       var(--brand-600);
+    --link: var(--brand-600);
     --link-hover: var(--brand-500);
 
     /* Spacing */
     --space--1: .5rem;
     --space-1: 1rem;
     --space-2: 2rem;
-    --gutter: clamp(1rem, 4vw, 4rem);
+    --gutter: clamp(1rem, 0.25rem + 1.2vw, 5rem);
+
 
     /* Layout */
     --container: 72rem;
     --hero-pad-top: clamp(1rem, 8vh, 6rem);
+    --nav-max: clamp(64rem, 92vw, 80rem);       
+    --content-max: clamp(48rem, 88vw, 64rem);   
 
     /* Type scale (just enough) */
     --stpe--1: clamp(0.875rem, 0.7917rem + 2.6042vw, 1.125rem);
